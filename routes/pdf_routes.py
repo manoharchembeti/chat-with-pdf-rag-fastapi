@@ -13,7 +13,7 @@ class QuestionRequest(BaseModel):
     question: str
 
 
-@router.post("/upload-pdf")
+@router.post("/upload-pdf/")
 async def upload_pdf(file: UploadFile = File(...)):
     text = await extract_text_from_pdf(file)
 
